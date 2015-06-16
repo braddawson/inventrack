@@ -7,15 +7,30 @@
 
   <br>
 
+  <!-- push a new item onto the Kitchen Inventory -->
+  <form class="form-inline" ng-submit="addItem()">
+    <div class="form-group">
+      <label class="sr-only" for="newKitchenInventoryItem">Item</label>
+      <input type="text" class="form-control" id="newKitchenInventoryItem" placeholder="Enter Item" ng-model="newKitchenInventoryItem">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="itemAmount">Amount</label>
+      <input type="number" class="form-control" id="itemAmount" placeholder="Item Amount" ng-model="newKitchenInventoryItemAmount">
+    </div>
+    <button type="submit" class="btn btn-default">Add Item</button>
+  </form>
+
+  <br>
   <div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
+    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-5">
       <h4>amount</h4>
     </div>
-    <div class="col-lg-10 col-md-10 col-sm-9 col-xs-7">
+    <div class="col-lg-10 col-md-9 col-sm-9 col-xs-7">
       <h4>item</h4>
     </div>
   </div>
-  <ul>
+
+  <ul class="list-unstyled">
     <li ng-repeat="item in kitchenInventory">
       <div class="row">
 
@@ -54,22 +69,4 @@
       </div><!-- /row -->
     </li>
   </ul>
-
-  <br>
-  <br>
-
-  <!-- push a new item onto the Kitchen Inventory -->
-  <form class="form-inline" ng-submit="addItem()">
-    <div class="form-group">
-      <label class="sr-only" for="newKitchenInventoryItem">Item</label>
-      <input type="text" class="form-control" id="newKitchenInventoryItem" placeholder="Enter Item" ng-model="newKitchenInventoryItem">
-    </div>
-    <div class="form-group">
-      <label class="sr-only" for="itemAmount">Amount</label>
-      <input type="number" class="form-control" id="itemAmount" placeholder="Item Amount" ng-model="newKitchenInventoryItemAmount">
-    </div>
-    <button type="submit" class="btn btn-default">Add Item</button>
-  </form>
-
-
 </div>
