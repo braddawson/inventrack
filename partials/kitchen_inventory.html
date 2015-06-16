@@ -1,1 +1,46 @@
-<h4>{{title}}</h4>
+<div class="container" ng-controller="KitchenInventoryCtrl">
+  <h4>{{title}}</h4>
+
+    <li ng-repeat="item in kitchenInventory">
+      <div class="row">
+
+        <!-- edit amount -->
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" aria-hidden="true">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+            </span>
+            <input type="number" class="form-control" ng-model="item.amount" ng-change="kitchenInventory.$save(item.amount)">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" aria-hidden="true" ng-click="kitchenInventory.$remove(item)">
+                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+              </button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- /col-lg-2 col-md-2 col-sm-3 col-xs-5 -->
+
+        <!-- edit item -->
+        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-7">
+          <div class="input-group">
+            <input type="text" class="form-control "ng-model="item.item" ng-change="kitchenInventory.$save(item.item)" />
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-danger" aria-hidden="true" ng-click="kitchenInventory.$remove(item)">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+              </button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- col-lg-5 col-md-5 col-sm-5 col-xs-5 -->
+      </div><!-- /row -->
+    </li>
+  </ul>
+
+
+
+  <!-- push a new item onto the Kitchen Inventory -->
+  <form ng-submit="addItem()">
+    <input ng-model="newKitchenInventoryItem" />
+    <button type="submit">Add Item</button>
+  </form>
+</div>

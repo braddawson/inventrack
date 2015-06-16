@@ -1,6 +1,6 @@
-var app = angular.module('invenApp', ['ngRoute']);
+var invenApp = angular.module('invenApp', ['ngRoute', 'firebase'])
 
-app.config(['$routeProvider', function ($routeProvider) {
+invenApp.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     .when("/", {templateUrl: "partials/home.html", controller: "MainCtrl"})
     .when("/batch_builder", {templateUrl: "partials/batch_builder.html", controller: "BatchBuilderCtrl"})

@@ -1,1 +1,18 @@
-<h4>{{title}}</h4>
+<div ng-controller="PackagingInventoryCtrl">
+  <h4>{{title}}</h4>
+  <ul>
+    <li ng-repeat="item in packagingInventory">
+      <!-- edit an item -->
+      <input ng-model="item.item" ng-change="packagingInventory.$save(item)" />
+
+      <!-- delete an item -->
+      <button ng-click="packagingInventory.$remove(item)">Delete Item</button>
+    </li>
+  </ul>
+
+  <!-- push a new item onto the Packing Inventory -->
+  <form ng-submit="addItem()">
+    <input ng-model="newPackagingInventoryItem" />
+    <button type="submit">Add Item</button>
+  </form>
+</div>
