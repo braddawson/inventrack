@@ -15,21 +15,21 @@
       <h4>item</h4>
     </div>
   </div>
-
+  <ul>
     <li ng-repeat="item in kitchenInventory">
       <div class="row">
 
         <!-- edit amount -->
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
+        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-5">
           <div class="input-group">
             <span class="input-group-btn">
-              <button type="button" class="btn btn-default" aria-hidden="true">
+              <button type="button" class="btn btn-default" aria-hidden="true" ng-model="kitchenInventory.item.amount" ng-click="plusOne()">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
               </button>
             </span>
-            <input type="number" class="form-control" ng-model="item.amount" ng-change="kitchenInventory.$save(item.amount)">
+            <input type="number" class="form-control" ng-model="item.amount" ng-change="kitchenInventory.$save(item)">
             <span class="input-group-btn">
-              <button type="button" class="btn btn-default" aria-hidden="true">
+              <button type="button" class="btn btn-default" aria-hidden="true" ng-model="kitchenInventory.item.amount" ng-click="minusOne()">
                 <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
               </button>
             </span>
@@ -37,9 +37,9 @@
         </div><!-- /col-lg-2 col-md-2 col-sm-3 col-xs-5 -->
 
         <!-- edit item -->
-        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-7">
+        <div class="col-lg-10 col-md-9 col-sm-9 col-xs-7">
           <div class="input-group">
-            <input type="text" class="form-control "ng-model="item.item" ng-change="kitchenInventory.$save(item.item)" />
+            <input type="text" class="form-control "ng-model="item.item" ng-change="kitchenInventory.$save(item)" />
             <div class="input-group-btn">
               <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> <span class="caret"></span></button>
               <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -50,15 +50,26 @@
             </div>
           </div><!-- /input-group -->
         </div><!-- col-lg-5 col-md-5 col-sm-5 col-xs-5 -->
+
       </div><!-- /row -->
     </li>
   </ul>
 
-
+  <br>
+  <br>
 
   <!-- push a new item onto the Kitchen Inventory -->
-  <form ng-submit="addItem()">
-    <input ng-model="newKitchenInventoryItem" />
-    <button type="submit">Add Item</button>
+  <form class="form-inline" ng-submit="addItem()">
+    <div class="form-group">
+      <label class="sr-only" for="newKitchenInventoryItem">Item</label>
+      <input type="text" class="form-control" id="newKitchenInventoryItem" placeholder="Enter Item" ng-model="newKitchenInventoryItem">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="itemAmount">Amount</label>
+      <input type="number" class="form-control" id="itemAmount" placeholder="Item Amount" ng-model="newKitchenInventoryItemAmount">
+    </div>
+    <button type="submit" class="btn btn-default">Add Item</button>
   </form>
+
+
 </div>
