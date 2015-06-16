@@ -12,6 +12,6 @@ invenApp.controller('KitchenInventoryCtrl', function($scope, $firebaseArray) {
       item: $scope.newKitchenInventoryItem,
       amount: 0
     });
-
+    $scope.newKitchenInventoryItem = "";
   };
 });
