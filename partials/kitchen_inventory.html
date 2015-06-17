@@ -40,13 +40,13 @@
         <div class="col-lg-2 col-md-3 col-sm-3 col-xs-5">
           <div class="input-group">
             <span class="input-group-btn">
-              <button type="button" class="btn btn-default" aria-hidden="true" ng-model="kitchenInventory.item.amount" ng-click="plusOne()">
+              <button type="button" class="btn btn-default" aria-hidden="true" ng-click="plusOne(item)">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
               </button>
             </span>
-            <input type="number" class="form-control" ng-model="item.amount" ng-change="kitchenInventory.$save(item)">
+            <input type="number" class="form-control" id="itemAmount" ng-model="item.amount" ng-change="kitchenInventory.$save(item)">
             <span class="input-group-btn">
-              <button type="button" class="btn btn-default" aria-hidden="true" ng-model="kitchenInventory.item.amount" ng-click="minusOne()">
+              <button type="button" class="btn btn-default" aria-hidden="true"ng-click="minusOne(item)">
                 <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
               </button>
             </span>
