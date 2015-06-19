@@ -1,7 +1,7 @@
 invenApp.controller('KitchenInventoryCtrl', function($scope, $firebaseArray) {
-    $scope.title = "Kitchen Inventory";
+  $scope.title = "Kitchen Inventory";
 
-  var ref = new Firebase("https://invenapp.firebaseio.com/kitchenInventory");
+  var ref = new Firebase("https://invenapp.firebaseio.com/inventory");
 
   // create a synchronized array
   $scope.kitchenInventory = $firebaseArray(ref);
@@ -10,7 +10,10 @@ invenApp.controller('KitchenInventoryCtrl', function($scope, $firebaseArray) {
   $scope.addItem = function() {
     $scope.kitchenInventory.$add({
       item: $scope.newKitchenInventoryItem,
-      amount: $scope.newKitchenInventoryItemAmount
+      amount: $scope.newKitchenInventoryItemAmount,
+      timestamp: Firebase.ServerValue.TIMESTAMP,
+      inventory: "kitchen",
+      reorderPoint: 1
     });
     $scope.newKitchenInventoryItem = "";
     $scope.newKitchenInventoryItemAmount = "";

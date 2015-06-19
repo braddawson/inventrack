@@ -1,1 +1,72 @@
-<h4>{{title}}</h4>
+<div class="container-fluid" id="container-div" ng-controller="ReorderListCtrl">
+  <div>
+   <div class="row" id="top-div">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." ng-model="query">
+              <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" id="title">
+        <h2>{{title}}</h2>
+      </div>
+    </div><!-- end of row -->
+
+    <br>
+
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <h4>need</h4>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <h4>item</h4>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <h4>in stock</h4>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <h4>rop</h4>
+    </div>
+  </div>
+
+  <ul class="list-unstyled">
+    <li ng-repeat="item in inventory | filter:query">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div class="form-group">
+              <input type="number" class="form-control" value="{{item.reorderPoint - item.amount}}" readonly/>
+            </div>
+        </div><!-- col-lg-3 col-md-3 col-sm-3 col-xs-3 -->
+
+        <!-- edit item -->
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+          <div class="form-group">
+            <input type="text" class="form-control" ng-model="item.item" ng-change="inventory.$save(item)"/>
+          </div><!-- /input-group -->
+        </div><!-- col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
+
+        <!-- edit amount -->
+         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div class="form-group">
+              <input type="number" class="form-control" id="itemAmount" ng-model="item.amount" ng-change="inventory.$save(item)"/>
+            </div>
+          </div><!-- col-lg-3 col-md-3 col-sm-3 col-xs-3 -->
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+          <div class="form-group">
+            <input type="number" id="rop" class="form-control" ng-model="item.reorderPoint" ng-change="inventory.$save(item)"/>
+          </div>
+        </div><!-- col-lg-3 col-md-3 col-sm-3 col-xs-3 -->
+
+      </div><!-- /row -->
+      <br>
+    </li>
+  </ul>
+</div>

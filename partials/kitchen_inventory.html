@@ -47,7 +47,7 @@
   </div>
 
   <ul class="list-unstyled">
-    <li ng-repeat="item in kitchenInventory | filter:query">
+    <li ng-repeat="item in kitchenInventory | filter:{$: 'kitchen'} | filter:query">
       <div class="row">
 
         <!-- edit amount -->
