@@ -13,10 +13,11 @@ invenApp.controller('KitchenInventoryCtrl', function($scope, $firebaseArray) {
       amount: $scope.newKitchenInventoryItemAmount,
       timestamp: Firebase.ServerValue.TIMESTAMP,
       inventory: "kitchen",
-      reorderPoint: 1
+      reorderPoint: $scope.newKitchenInventoryItemReorderPoint
     });
     $scope.newKitchenInventoryItem = "";
     $scope.newKitchenInventoryItemAmount = "";
+    $scope.newKitchenInventoryItemReorderPoint = "";
     $("#newKitchenInventoryItem").focus();
   };
 

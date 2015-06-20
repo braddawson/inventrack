@@ -13,10 +13,12 @@ invenApp.controller('PackagingInventoryCtrl', function($scope, $firebaseArray) {
       amount: $scope.newPackagingInventoryItemAmount,
       timestamp: Firebase.ServerValue.TIMESTAMP,
       inventory: "packaging",
-      reorderPoint: 1
+      reorderPoint: 1,
+      reorderPoint: $scope.newPackagingInventoryItemReorderPoint
     });
     $scope.newPackagingInventoryItem = "";
     $scope.newPackagingInventoryItemAmount = "";
+    $scope.newPackagingInventoryItemReorderPoint = "";
     $("#newPackagingInventoryItem").focus();
   };
 

@@ -37,7 +37,7 @@
 
   <ul class="list-unstyled">
     <li ng-repeat="item in inventory | filter:query">
-      <div class="row">
+      <div class="row" ng-if="(item.reorderPoint - item.amount) > 0" >
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
             <div class="form-group">
@@ -48,7 +48,7 @@
         <!-- edit item -->
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
           <div class="form-group">
-            <input type="text" class="form-control" ng-model="item.item" ng-change="inventory.$save(item)"/>
+            <input type="text" class="form-control" ng-model="item.item" ng-change="inventory.$save(item)" />
           </div><!-- /input-group -->
         </div><!-- col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
 
@@ -66,7 +66,6 @@
         </div><!-- col-lg-3 col-md-3 col-sm-3 col-xs-3 -->
 
       </div><!-- /row -->
-      <br>
     </li>
   </ul>
 </div>
