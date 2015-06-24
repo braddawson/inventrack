@@ -15,7 +15,7 @@ invenApp.config(['$routeProvider', function ($routeProvider) {
       templateUrl: 'partials/login.html'
    })
     .when('/register', {
-      controller: 'RegisterCtrl',
+      controller: 'AuthCtrl',
       templateUrl: 'partials/register.html'
    })
     .when('/cooking_forecast', {
@@ -61,3 +61,5 @@ invenApp.config(['$routeProvider', function ($routeProvider) {
       controller: "ErrCtrl"
     });
 }]);
+
+invenApp.constant('FB_URL', 'https://invenapp.firebaseio.com');

@@ -1,5 +1,8 @@
 invenApp.controller("RegisterCtrl", ["$scope", "AuthFactory", "$firebaseArray", "$location",
   function($scope, AuthFactory, $firebaseArray, $location) {
+
+
+
     $scope.createUser = function() {
       $scope.message = null;
       $scope.error = null;
