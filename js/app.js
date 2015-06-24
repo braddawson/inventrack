@@ -1,4 +1,4 @@
-var invenApp = angular.module('invenApp', ['ngRoute', 'firebase'])
+var invenApp = angular.module('invenApp', ['ngRoute', 'firebase']);
 
 invenApp.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
@@ -9,6 +9,14 @@ invenApp.config(['$routeProvider', function ($routeProvider) {
     .when("/batch_builder", {
       templateUrl: "partials/batch_builder.html",
       controller: "BatchBuilderCtrl"
+   })
+    .when('/login', {
+      controller: 'AuthCtrl',
+      templateUrl: 'partials/login.html'
+   })
+    .when('/register', {
+      controller: 'RegisterCtrl',
+      templateUrl: 'partials/register.html'
    })
     .when('/cooking_forecast', {
       templateUrl:'partials/cooking_forecast.html',
