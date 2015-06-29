@@ -1,4 +1,4 @@
-invenApp.controller('ReorderListCtrl', function($scope, $firebaseArray) {
+invenApp.controller('ReorderListCtrl', ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
   $scope.title = "Reorder List";
 
   var ref = new Firebase("https://invenapp.firebaseio.com/inventory");
@@ -6,4 +6,4 @@ invenApp.controller('ReorderListCtrl', function($scope, $firebaseArray) {
   // create a synchronized array
   $scope.inventory = $firebaseArray(ref);
 
-});
+}]);

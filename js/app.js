@@ -1,14 +1,30 @@
 var invenApp = angular.module('invenApp', ['ngRoute', 'firebase']);
 
+invenApp.factory("AuthFactory", ["$firebaseAuth", function($firebaseAuth) {
+  var ref = new Firebase("https://invenapp.firebaseio.com/");
+  return $firebaseAuth(ref);
+}]);
+
+//auth is used in controller in navbar
+invenApp.controller("NavCtrl", ["$scope", "AuthFactory", function($scope, AuthFactory) {
+  $scope.auth = AuthFactory;
+  $scope.user = $scope.auth.$getAuth();
+}])
+
+//redirects to homepage if $requireAuth rejects
+invenApp.run(["$rootScope", "$location", function($rootScope, $location) {
+  $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
+    if (error === "AUTH_REQUIRED") {
+      $location.path("/login");
+    }
+  });
+}]);
+
 invenApp.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     .when("/", {
-      templateUrl: "partials/home.html",
-     controller: "MainCtrl"
-   })
-    .when("/batch_builder", {
-      templateUrl: "partials/batch_builder.html",
-      controller: "BatchBuilderCtrl"
+     controller: "AuthCtrl",
+      templateUrl: "partials/login.html"
    })
     .when('/login', {
       controller: 'AuthCtrl',
@@ -18,48 +34,39 @@ invenApp.config(['$routeProvider', function ($routeProvider) {
       controller: 'AuthCtrl',
       templateUrl: 'partials/register.html'
    })
-    .when('/cooking_forecast', {
-      templateUrl:'partials/cooking_forecast.html',
-      controller:'CookingForecastCtrl'
-     })
-    .when('/cooking_inventory', {
-      templateUrl:'partials/cooking_inventory.html',
-      controller:'CookingInventoryCtrl'
-    })
     .when('/kitchen_inventory', {
-      templateUrl:'partials/kitchen_inventory.html',
-      controller:'KitchenInventoryCtrl',
-      css: 'css/kitchenInventory.css'
-    })
-    .when('/packaging_forecast', {
-      templateUrl:'partials/packaging_forecast.html',
-      controller:'PackagingForecastCtrl'
+        controller:'KitchenInventoryCtrl',
+        templateUrl:'partials/kitchen_inventory.html',
+        resolve: {
+        "currentAuth": ["AuthFactory", function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
     })
     .when('/packaging_inventory', {
-      templateUrl:'partials/packaging_inventory.html',
       controller:'PackagingInventoryCtrl',
-      css: 'css/packagingInventory.css'
-    })
-    .when('/phone_log', {
-      templateUrl:'partials/phone_log.html',
-      controller:'PhoneLogCtrl'
+      templateUrl:'partials/packaging_inventory.html',
+      resolve: {
+        "currentAuth": ["AuthFactory", function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
     })
     .when('/reorder_list', {
+      controller:'ReorderListCtrl',
       templateUrl:'partials/reorder_list.html',
-      controller:'ReorderListCtrl'
-    })
-    .when('/time_clock', {
-      templateUrl:'partials/time_clock.html',
-      controller:'TimeClockCtrl'
-    })
-    .when('/vendor_receiving', {
-      templateUrl:'partials/vendor_receiving.html',
-      controller:'VendorReceivingCtrl'
+      resolve: {
+        "currentAuth": ["AuthFactory", function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
     })
     .otherwise("/404", {
-      templateUrl: "partials/404.html",
-      controller: "ErrCtrl"
+      controller: "ErrCtrl",
+      templateUrl: "partials/404.html"
     });
 }]);
+
+
 
 invenApp.constant('FB_URL', 'https://invenapp.firebaseio.com');
