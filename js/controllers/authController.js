@@ -1,4 +1,4 @@
-invenApp.controller('AuthCtrl', ['$scope', '$location', 'AuthFactory', "$firebaseArray", function($scope, $location, AuthFactory, $firebaseArray){
+invenApp.controller('AuthCtrl', ['$scope', '$location', 'AuthFactory', "$firebaseArray", "$window", function($scope, $location, AuthFactory, $firebaseArray, $window){
 
     var ref = new Firebase("https://invenapp.firebaseio.com");
 
@@ -13,6 +13,7 @@ invenApp.controller('AuthCtrl', ['$scope', '$location', 'AuthFactory', "$firebas
           console.log("Authenticated successfully with payload:", authData);
           $location.path('/reorder_list');
           $scope.$apply();
+          $window.location.reload();
         }
       });
     //   AuthFactory.login($scope.user.email, $scope.user.password, function() {
@@ -41,6 +42,7 @@ invenApp.controller('AuthCtrl', ['$scope', '$location', 'AuthFactory', "$firebas
               console.log("Authenticated successfully with payload:", authData);
               $location.path('/reorder_list');
               $scope.apply();
+              $window.location.reload();
             }
           });
         }
