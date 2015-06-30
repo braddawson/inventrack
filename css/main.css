@@ -4,3 +4,8 @@ body{
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
+
+/*kitchen inventory style*/
+.light-teal-background {
+  background-color: #B2DFDB;
+}

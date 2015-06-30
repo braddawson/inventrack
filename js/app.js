@@ -6,13 +6,14 @@ invenApp.factory("AuthFactory", ["$firebaseAuth", function($firebaseAuth) {
 }]);
 
 //auth is used in controller in navbar
-invenApp.controller("NavCtrl", ["$scope", "AuthFactory", "$location", function($scope, AuthFactory, $location) {
+invenApp.controller("NavCtrl", ["$scope", "AuthFactory", "$location", "$window", function($scope, AuthFactory, $location, $window) {
   $scope.auth = AuthFactory;
   $scope.user = $scope.auth.$getAuth();
 
   $scope.logout = function() {
     $scope.auth.$unauth();
     $location.path('login');
+    $window.location.reload();
   }
 }])
 

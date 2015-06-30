@@ -6,4 +6,8 @@ invenApp.controller('ReorderListCtrl', ["$scope", "$firebaseArray", function($sc
   // create a synchronized array
   $scope.inventory = $firebaseArray(ref);
 
+  $scope.clear = function() {
+    $scope.query = "";
+  };
+
 }]);

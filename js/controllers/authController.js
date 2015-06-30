@@ -41,7 +41,7 @@ invenApp.controller('AuthCtrl', ['$scope', '$location', 'AuthFactory', "$firebas
             } else {
               console.log("Authenticated successfully with payload:", authData);
               $location.path('/reorder_list');
-              $scope.apply();
+              $scope.$apply();
               $window.location.reload();
             }
           });

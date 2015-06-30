@@ -32,4 +32,8 @@ invenApp.controller('PackagingInventoryCtrl', function($scope, $firebaseArray) {
     $scope.packagingInventory.$save(item);
   };
 
+  $scope.clear = function() {
+    $scope.query = "";
+  };
+
 });

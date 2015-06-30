@@ -31,4 +31,8 @@ invenApp.controller('KitchenInventoryCtrl', function($scope, $firebaseArray) {
     $scope.kitchenInventory.$save(item);
   };
 
+  $scope.clear = function() {
+    $scope.query = "";
+  };
+
 });
