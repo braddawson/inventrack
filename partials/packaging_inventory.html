@@ -1,4 +1,4 @@
-<div class="container-fluid" id="container-div" ng-controller="PackagingInventoryCtrl">
+<div class="container-fluid  padding-top-20 packaging-inventory-background" id="container-div" ng-controller="PackagingInventoryCtrl">
   <div>
    <div class="row" id="top-div">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
@@ -7,7 +7,7 @@
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for..." ng-model="query">
               <span class="input-group-btn">
-              <button class="btn btn-default" type="button" ng-click="clear()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+              <button class="btn btn-default ap" type="button" ng-click="clear()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
               </span>
             </div><!-- /input-group -->
           </div><!-- /.col-lg-12 -->
@@ -34,7 +34,7 @@
         <label class="sr-only" for="itemReorderPoint">Reorder Point</label>
         <input type="number" class="form-control" id="itemReorderPoint" placeholder="Re-order point" ng-model="newPackagingInventoryItemReorderPoint" required>
       </div>
-      <button type="submit" class="btn btn-default">Add Item</button>
+      <button type="submit" class="btn btn-default ap">Add Item</button>
     </form>
   </div>
   <br>
@@ -61,14 +61,14 @@
         <div class="col-lg-2 col-md-3 col-sm-3 col-xs-5">
           <div class="input-group">
             <span class="input-group-btn">
-              <button type="button" class="btn btn-default" aria-hidden="true" ng-click="plusOne(item)">
+              <button type="button" class="btn btn-default ap" aria-hidden="true" ng-click="plusOne(item)">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
               </button>
             </span>
             <input type="number" class="form-control" id="itemAmount" ng-model="item.amount" ng-change="packagingInventory.$save(item)">
             <span class="input-group-btn">
-              <button type="button" class="btn btn-default" aria-hidden="true"ng-click="minusOne(item)">
-                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+              <button type="button" class="btn btn-default ap" aria-hidden="true"ng-click="minusOne(item)">
+                <span class="glyphicon glyphicon-minus" ara ap-hidden="true"></span>
               </button>
             </span>
           </div><!-- /input-group -->
@@ -80,10 +80,10 @@
           <div class="input-group">
             <input type="text" class="form-control" ng-model="item.item" ng-change="packagingInventory.$save(item)" />
             <div class="input-group-btn">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+              <button type="button" class="btn btn-default dropdown-toggle ap" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
               <ul class="dropdown-menu dropdown-menu-right" role="menu">
                 <li>
-                  <a href="#/packaging_inventory" ng-click="packagingInventory.$remove(item)">Delete Item</a>
+                  <a class="delete-dropdown" href="#/packaging_inventory" ng-click="packagingInventory.$remove(item)">Delete Item</a>
                 </li>
               </ul>
             </div>

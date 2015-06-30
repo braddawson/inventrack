@@ -1,11 +1,98 @@
+/**{border: solid 1px red;}*/
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+.padding-top-20 {
+  padding-top: 20px;
+}
+
+/*navbar style*/
+.nav-text-color {
+  color: #607D8B;
+  font-weight: 400;
+  font-size: 2em;
+}
 
 /*set font-family and center content below navbar*/
 body{
   text-align: center;
   font-family: "Roboto", sans-serif;
+  color: #212121;
+}
+
+/*delete drop down*/
+.delete-dropdown {
+  background-color: #FF4081;
+}
+.dropdown-menu>li>a {
+  color: #FFFFFF;
 }
 
 /*kitchen inventory style*/
-.light-teal-background {
+.kitchen-inventory-background {
   background-color: #B2DFDB;
+  padding-bottom: 100%;
+}
+
+/*accent-kitchen for buttons*/
+.ak {
+  background-color: #607D8B;
+  color: #FFFFFF;
+}
+
+/*packaging inventory style*/
+.packaging-inventory-background {
+  background-color: #D7CCC8;
+  padding-bottom: 100%;
+}
+
+/*accent-packaging*/
+.ap {
+  background-color: #607D8B;
+  color: #FFFFFF;
+}
+
+/*reorder list style*/
+.reorder-list-background {
+  background-color: #F8BBD0;
+  padding-bottom: 100%;
+}
+
+/*accent-reorder*/
+.ar {
+  background-color: #607D8B;
+  color: #FFFFFF;
+}
+/*login style*/
+.login-background {
+  background-color: #B3E5FC;
+  padding-bottom: 100%;
+}
+
+/*accent-login*/
+.al {
+  background-color: #607D8B;
+  color: #FFFFFF;
+}
+
+.secondary-text-login {
+  color: #727272;
+}
+
+/*register style*/
+.register-background {
+  background-color: #DCEDC8;
+  padding-bottom: 100%;
+}
+
+/*accent-register*/
+.areg {
+  background-color: #607D8B;
+  color: #FFFFFF;
+}
+
+.secondary-text-register {
+  color: #727272;
 }
