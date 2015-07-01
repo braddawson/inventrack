@@ -54,7 +54,7 @@
   </div>
 
   <ul class="list-unstyled">
-    <li ng-repeat="item in packagingInventory | filter:{$: 'packaging'} | filter:query">
+    <li ng-repeat="item in packagingInventory | orderBy: '-timestamp' | filter:{$: 'packaging'} | filter:query">
       <div class="row">
 
         <!-- edit amount -->
