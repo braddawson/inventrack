@@ -21,49 +21,49 @@
     <br>
 
   <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
       <h4>need</h4>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
       <h4>item</h4>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
       <h4>in stock</h4>
     </div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+<!--     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <h4>rop</h4>
-    </div>
+    </div> -->
   </div>
 
   <ul class="list-unstyled">
     <li ng-repeat="item in inventory | orderBy: 'item' | filter:query">
       <div class="row" ng-if="(item.reorderPoint - item.amount) > 0" >
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <div class="form-group">
               <input type="number" class="form-control" value="{{item.reorderPoint - item.amount}}" readonly/>
             </div>
-        </div><!-- col-lg-3 col-md-3 col-sm-3 col-xs-3 -->
+        </div><!-- col-lg-4 col-md-4 col-sm-4 col-xs-4 -->
 
         <!-- edit item -->
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
           <div class="form-group">
             <input type="text" class="form-control" ng-model="item.item" ng-change="inventory.$save(item)" />
           </div><!-- /input-group -->
         </div><!-- col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
 
         <!-- edit amount -->
-         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <div class="form-group">
               <input type="number" class="form-control" id="itemAmount" ng-model="item.amount" ng-change="inventory.$save(item)"/>
             </div>
-          </div><!-- col-lg-3 col-md-3 col-sm-3 col-xs-3 -->
+          </div><!-- col-lg-4 col-md-4 col-sm-4 col-xs-4 -->
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+<!--         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
           <div class="form-group">
             <input type="number" id="rop" class="form-control" ng-model="item.reorderPoint" ng-change="inventory.$save(item)"/>
           </div>
-        </div><!-- col-lg-3 col-md-3 col-sm-3 col-xs-3 -->
+        </div> --><!-- col-lg-3 col-md-3 col-sm-3 col-xs-3 -->
 
       </div><!-- /row -->
     </li>
