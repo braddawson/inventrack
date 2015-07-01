@@ -36,7 +36,7 @@
   </div>
 
   <ul class="list-unstyled">
-    <li ng-repeat="item in inventory | filter:query">
+    <li ng-repeat="item in inventory | orderBy: 'item' | filter:query">
       <div class="row" ng-if="(item.reorderPoint - item.amount) > 0" >
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
