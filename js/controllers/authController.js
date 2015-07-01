@@ -35,6 +35,14 @@ invenApp.controller('AuthCtrl', ['$scope', '$location', 'AuthFactory', "$firebas
             if (error) {
               console.log("Login Failed!", error);
             } else {
+              var ref = new Firebase("https://invenapp.firebaseio.com/users");
+              $scope.users = $firebaseArray(ref);
+              $scope.users.$add({
+                firstname: $scope.user.firstname,
+                lastname: $scope.user.lastname,
+                email: $scope.user.email,
+                timestamp: Firebase.ServerValue.TIMESTAMP
+              });
               console.log("Authenticated successfully with payload:", authData);
               $location.path('/reorder_list');
               $scope.$apply();
