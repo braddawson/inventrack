@@ -34,6 +34,7 @@ invenApp.controller('PackagingInventoryCtrl', function($scope, $firebaseArray) {
 
   $scope.clear = function() {
     $scope.query = "";
+    $("#searchInput").focus();
   };
 
 });

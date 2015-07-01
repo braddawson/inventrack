@@ -16,10 +16,6 @@ invenApp.controller('AuthCtrl', ['$scope', '$location', 'AuthFactory', "$firebas
           $window.location.reload();
         }
       });
-    //   AuthFactory.login($scope.user.email, $scope.user.password, function() {
-    //     $location.path('/reorder_list');
-    //     $scope.$apply();
-    //   });
      };
 
     $scope.register = function() {
@@ -48,20 +44,4 @@ invenApp.controller('AuthCtrl', ['$scope', '$location', 'AuthFactory', "$firebas
         }
       });
     };
-    //   AuthFactory.register($scope.user.email, $scope.user.password, function() {
-    //     AuthFactory.login($scope.user.email, $scope.user.password, function() {
-    //       $location.path('/login');
-    //       $scope.$apply();
-    //     });
-    //     // create user profile in database
-    //     var ref = new Firebase("https://invenapp.firebaseio.com/users");
-    //     $scope.users = $firebaseArray(ref);
-    //     $scope.users.$add({
-    //       firstname: $scope.user.firstname,
-    //       lastname: $scope.user.lastname,
-    //       email: $scope.user.email
-    //     });
-    //   });
-    // };
-
   }]);

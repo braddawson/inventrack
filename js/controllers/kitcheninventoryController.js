@@ -33,6 +33,7 @@ invenApp.controller('KitchenInventoryCtrl', function($scope, $firebaseArray) {
 
   $scope.clear = function() {
     $scope.query = "";
+    $("#searchInput").focus();
   };
 
 });

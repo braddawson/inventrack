@@ -8,6 +8,7 @@ invenApp.controller('ReorderListCtrl', ["$scope", "$firebaseArray", function($sc
 
   $scope.clear = function() {
     $scope.query = "";
+    $("#searchInput").focus();
   };
 
 }]);
