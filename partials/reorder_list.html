@@ -48,14 +48,14 @@
         <!-- edit item -->
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
           <div class="form-group">
-            <input type="text" class="form-control" ng-model="item.item" ng-change="inventory.$save(item)" />
+            <input type="text" class="form-control" ng-model="item.item" ng-change="inventory.$save(item)" readonly/>
           </div><!-- /input-group -->
         </div><!-- col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
 
         <!-- edit amount -->
          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <div class="form-group">
-              <input type="number" class="form-control" id="itemAmount" ng-model="item.amount" ng-change="inventory.$save(item)"/>
+              <input type="number" class="form-control" id="itemAmount" ng-model="item.amount" ng-change="inventory.$save(item)" readonly/>
             </div>
           </div><!-- col-lg-4 col-md-4 col-sm-4 col-xs-4 -->
 
