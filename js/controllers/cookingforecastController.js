@@ -1,4 +1,4 @@
 invenApp.controller('CookingForecastCtrl', function ($scope) {
   console.log("Cooking Forecast Controller.");
-    $scope.title = 'Cooking Forecast';
+  $scope.title = 'Cooking Forecast';
 });
