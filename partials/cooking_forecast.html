@@ -118,327 +118,51 @@
   <div class="row">
 
     <div class="col-md-2">
-      <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Monday</div>
-        <div class="panel-body">
-          <h3>Toffee</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-          <h3>Caramel</h3>
-          <h4>Sea Salt</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-          <h4>Bourdon</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-          <h3>Pralines</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div><!-- panel panel-default -->
-    </div><!-- col-md-2 -->
 
-    <div class="col-md-2">
       <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading">Tuesday</div>
+        <div class="panel-heading"><h4>Monday</h4></div>
         <div class="panel-body">
           <h3>Toffee</h3>
           <form class="form-inline">
             <div class="form-group">
               <label class="sr-only" for="toffee">Amount (in pounds)</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
+                <input type="number" class="form-control" id="toffeeTotalMonday" ng-model="cookingforecast.toffeeTotalMonday" ng-change="cookingforecast.$save(toffeeTotalMonday)" min="0">
                 <div class="input-group-addon">lbs</div>
               </div>
             </div>
           </form>
-        </div>
-        <div class="panel-body">
-          <h3>Caramel</h3>
-          <h4>Sea Salt</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-          <h4>Bourdon</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-          <h3>Pralines</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div><!-- panel panel-default -->
-    </div><!-- col-md-2 -->
+        </div><!-- panel-body toffee -->
 
-    <div class="col-md-2">
-      <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Wednesday</div>
-        <div class="panel-body">
-          <h3>Toffee</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
         <div class="panel-body">
           <h3>Caramel</h3>
-          <h4>Sea Salt</h4>
           <form class="form-inline">
             <div class="form-group">
               <label class="sr-only" for="caramel">Amount (in pounds)</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
+                <input type="number" class="form-control" id="caramelTotalMonday" ng-model="cookingforecast.caramelTotalMonday" ng-change="cookingforecast.$save(caramelTotalMonday)" min="0">
                 <div class="input-group-addon">lbs</div>
               </div>
             </div>
           </form>
-          <h4>Bourdon</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-          <h3>Pralines</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div><!-- panel panel-default -->
-    </div><!-- col-md-2 -->
+        </div><!-- panel-body caramel -->
 
-    <div class="col-md-2">
-      <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Thursday</div>
-        <div class="panel-body">
-          <h3>Toffee</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-          <h3>Caramel</h3>
-          <h4>Sea Salt</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-          <h4>Bourdon</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
         <div class="panel-body">
           <h3>Pralines</h3>
           <form class="form-inline">
             <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
+              <label class="sr-only" for="pralines">Amount (in pounds)</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
+                <input type="number" class="form-control" id="pralinesTotalMonday" ng-model="cookingforecast.pralinesTotalMonday" ng-change="cookingforecast.$save(pralinesTotalMonday)" min="0">
                 <div class="input-group-addon">lbs</div>
               </div>
             </div>
           </form>
-        </div>
-      </div><!-- panel panel-default -->
-    </div><!-- col-md-2 -->
+        </div><!-- panel-body pralines -->
 
-    <div class="col-md-2">
-      <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Friday</div>
-        <div class="panel-body">
-          <h3>Toffee</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-          <h3>Caramel</h3>
-          <h4>Sea Salt</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-          <h4>Bourdon</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-          <h3>Pralines</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
       </div><!-- panel panel-default -->
-    </div><!-- col-md-2 -->
 
-    <div class="col-md-2">
-      <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Sat./Sun.</div>
-        <div class="panel-body">
-          <h3>Toffee</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-          <h3>Caramel</h3>
-          <h4>Sea Salt</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-          <h4>Bourdon</h4>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="caramel">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="caramel" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-          <h3>Pralines</h3>
-          <form class="form-inline">
-            <div class="form-group">
-              <label class="sr-only" for="toffee">Amount (in pounds)</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="toffee" placeholder="{{number}}">
-                <div class="input-group-addon">lbs</div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div><!-- panel panel-default -->
     </div><!-- col-md-2 -->
 
   </div><!-- row -->
