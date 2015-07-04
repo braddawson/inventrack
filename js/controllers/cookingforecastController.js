@@ -1,4 +1,4 @@
-invenApp.controller('CookingForecastCtrl', function ($scope, $firebaseObject) {
+invenApp.controller('CookingForecastCtrl', function ($scope, $firebaseObject, $firebaseArray) {
   console.log("Cooking Forecast Controller.");
   $scope.title = 'Cooking Forecast';
 
