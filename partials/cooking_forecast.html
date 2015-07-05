@@ -8,8 +8,8 @@
 
   <div class="row totals">
 
-    <div class="col-md-4 col-sm-4">
-      <div class="panel panel-default">
+    <div class="col-md-4 col-sm-4 col-xs-6">
+      <div class="panel panel-default  candy-score-board">
         <!-- Default panel contents -->
         <div class="panel-heading">
           <h3 class="panel-title">Toffee</h3>
@@ -20,20 +20,20 @@
         <!-- Table -->
         <table class="table table-striped">
           <tr>
-            <td>Sugar {{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.44) }} lbs</td>
+            <td class="odd-td">Sugar {{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.44) }} lbs</td>
           </tr>
           <tr>
             <td>Butter {{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.44) }} lbs</td>
           </tr>
           <tr>
-            <td>Almonds {{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.22) }} lbs</td>
+            <td class="odd-td">Almonds {{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.22) }} lbs</td>
           </tr>
         </table>
       </div><!-- panel panel-default -->
     </div><!-- col-md-4 -->
 
-    <div class="col-md-4 col-sm-4">
-      <div class="panel panel-default">
+    <div class="col-md-4 col-sm-4 col-xs-6">
+      <div class="panel panel-default candy-score-board">
         <!-- Default panel contents -->
         <div class="panel-heading">
           <h3 class="panel-title">Caramel</h3>
@@ -44,29 +44,29 @@
         <!-- Table -->
         <table class="table table-striped">
           <tr>
-            <td>Sugar {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.34) | number:2}} lbs</td>
+            <td class="odd-td">Sugar {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.34) | number:2}} lbs</td>
           </tr>
           <tr>
-            <td>Syrup {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.25) | number:2}} lbs</td>
+            <td>Syrup {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.25) * (1/(0.09)) | number:2}} oz</td>
           </tr>
           <tr>
-            <td>Swt Cnd Milk {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.16) | number:2}} lbs</td>
+            <td class="odd-td">Swt Cnd Milk {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.16) / (0.08) | number:2}} oz</td>
           </tr>
           <tr>
             <td>Butter {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.08) | number:2}} lbs</td>
           </tr>
           <tr>
-            <td>Cream {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.08) | number:2}} lbs</td>
+            <td class="odd-td">Cream {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.08) / (2.19) | number:2}} quarts</td>
           </tr>
           <tr>
-            <td>Milk {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.09) | number:2}} lbs</td>
+            <td>Milk {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.09) / (9.03) | number:2}} gallons</td>
           </tr>
         </table>
       </div><!-- panel panel-default -->
     </div><!-- col-md-4 -->
 
-    <div class="col-md-4 col-sm-4">
-      <div class="panel panel-default">
+    <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-lg-4 col-lg-offset-0">
+      <div class="panel panel-default  candy-score-board">
         <!-- Default panel contents -->
         <div class="panel-heading">
           <h3 class="panel-title">Pralines</h3>
@@ -77,19 +77,19 @@
         <!-- Table -->
         <table class="table table-striped">
           <tr>
-            <td>Sugar {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.22) | number:2}} lbs</td>
+            <td class="odd-td">Sugar {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.22) | number:2}} lbs</td>
           </tr>
           <tr>
             <td>Brown Sugar {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.22) | number:2}} lbs</td>
           </tr>
           <tr>
-            <td>Swt Cnd Milk {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.29) | number:2}} lbs</td>
+            <td class="odd-td">Swt Cnd Milk {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.29) / (0.08) | number:2}} oz</td>
           </tr>
           <tr>
             <td>Butter {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.02) | number:2}} lbs</td>
           </tr>
           <tr>
-            <td>Pecans {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.25) | number:2}} lbs</td>
+            <td class="odd-td">Pecans {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.25) | number:2}} lbs</td>
           </tr>
         </table>
       </div><!-- panel panel-default -->
@@ -99,7 +99,7 @@
 
   <div class="row days">
 
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4 col-xs-6">
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
@@ -147,7 +147,7 @@
 
     </div><!-- col-md-2 -->
 
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4 col-xs-6">
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
@@ -195,7 +195,7 @@
 
     </div><!-- col-md-2 -->
 
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4 col-xs-6">
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
@@ -243,7 +243,7 @@
 
     </div><!-- col-md-2 -->
 
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4 col-xs-6">
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
@@ -291,7 +291,7 @@
 
     </div><!-- col-md-2 -->
 
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4 col-xs-6">
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
@@ -339,7 +339,7 @@
 
     </div><!-- col-md-2 -->
 
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4 col-xs-6">
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
