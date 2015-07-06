@@ -20,10 +20,10 @@
         <!-- Table -->
         <table class="table table-striped">
           <tr>
-            <td class="odd-td">Sugar {{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.44) }} lbs</td>
+            <td class="odd-td">Sugar <span id="toffeeSugar">{{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.44) }} </span>lbs</td>
           </tr>
           <tr>
-            <td>Butter {{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.44) }} lbs</td>
+            <td>Butter <span id="toffeeButter">{{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.44) }} </span>lbs</td>
           </tr>
           <tr>
             <td class="odd-td">Almonds {{ (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.22) }} lbs</td>
@@ -44,16 +44,16 @@
         <!-- Table -->
         <table class="table table-striped">
           <tr>
-            <td class="odd-td">Sugar {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.34) | number:2}} lbs</td>
+            <td class="odd-td">Sugar <span id="caramelSugar">{{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.34) | number:2}} </span>lbs</td>
+          </tr>
+          <tr>
+            <td>Butter <span id="caramelButter">{{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.08) | number:2}} </span>lbs</td>
+          </tr>
+          <tr>
+            <td class="odd-td">Swt Cnd Milk <span id="caramelSCMilk">{{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.16) / (0.08) | number:2}} </span>oz</td>
           </tr>
           <tr>
             <td>Syrup {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.25) * (1/(0.09)) | number:2}} oz</td>
-          </tr>
-          <tr>
-            <td class="odd-td">Swt Cnd Milk {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.16) / (0.08) | number:2}} oz</td>
-          </tr>
-          <tr>
-            <td>Butter {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.08) | number:2}} lbs</td>
           </tr>
           <tr>
             <td class="odd-td">Cream {{ (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.08) / (2.19) | number:2}} quarts</td>
@@ -77,16 +77,27 @@
         <!-- Table -->
         <table class="table table-striped">
           <tr>
-            <td class="odd-td">Sugar {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.22) | number:2}} lbs</td>
+            <td class="odd-td">Sugar <span id="pralinesSugar">{{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.22) | number:2}} </span>lbs  <span class="badge">total: {{
+            ( (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.44)
+            + (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.34)
+            + (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.22) )  | number:2
+            }} lbs</span></td>
+          </tr>
+          <tr>
+            <td>Butter <span id="pralinesButter">{{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.02) | number:2}} </span>lbs  <span class="badge">total: {{
+            ( (cookingforecast.toffeeTotalMonday+cookingforecast.toffeeTotalTuesday+cookingforecast.toffeeTotalWednesday+cookingforecast.toffeeTotalThursday+cookingforecast.toffeeTotalFriday+cookingforecast.toffeeTotalSatSun) * (0.44)
+            + (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.08)
+            + (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.02) )  | number:2
+            }} lbs</span></td>
+          </tr>
+          <tr>
+            <td class="odd-td">Swt Cnd Milk <span id="pralinesSCMilk">{{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.29) / (0.08) | number:2}} </span>oz  <span class="badge">total: {{
+            ( (cookingforecast.caramelTotalMonday+cookingforecast.caramelTotalTuesday+cookingforecast.caramelTotalWednesday+cookingforecast.caramelTotalThursday+cookingforecast.caramelTotalFriday+cookingforecast.caramelTotalSatSun) * (0.16) / (0.08)
+            + (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.29) / (0.08) ) | number:2
+            }} oz</span></td>
           </tr>
           <tr>
             <td>Brown Sugar {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.22) | number:2}} lbs</td>
-          </tr>
-          <tr>
-            <td class="odd-td">Swt Cnd Milk {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.29) / (0.08) | number:2}} oz</td>
-          </tr>
-          <tr>
-            <td>Butter {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.02) | number:2}} lbs</td>
           </tr>
           <tr>
             <td class="odd-td">Pecans {{ (cookingforecast.pralinesTotalMonday+cookingforecast.pralinesTotalTuesday+cookingforecast.pralinesTotalWednesday+cookingforecast.pralinesTotalThursday+cookingforecast.pralinesTotalFriday+cookingforecast.pralinesTotalSatSun) * (0.25) | number:2}} lbs</td>

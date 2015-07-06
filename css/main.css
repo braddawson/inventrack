@@ -141,3 +141,8 @@ tr:nth-child(2n) {
 .candy-score-board{
   border: solid 1px #B6B6B6;
 }
+
+.badge{
+  background-color: #607D8B;
+  color: #FFFFFF;
+}
