@@ -76,6 +76,15 @@ invenApp.config(['$routeProvider', function ($routeProvider) {
         }]
       }
     })
+    .when('/packaging_forecast', {
+      controller:'PackagingForecastCtrl',
+      templateUrl:'partials/packaging_forecast.html',
+      resolve: {
+        "currentAuth": ["AuthFactory", function(Auth) {
+          return Auth.$requireAuth();
+        }]
+      }
+    })
     .otherwise("/404", {
       controller: "ErrCtrl",
       templateUrl: "partials/404.html"
